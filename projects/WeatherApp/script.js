@@ -3,6 +3,7 @@ const cityInput = document.getElementById('cityInput');
 const weatherData = document.getElementById('weatherData');
 const errorMsg = document.getElementById('errorMsg');
 const loader = document.getElementById('loader');
+const darkModeToggle = document.getElementById('darkModeToggle');
 
 // Elements to update
 const cityName = document.getElementById('cityName');
@@ -10,6 +11,12 @@ const temperature = document.getElementById('temperature');
 const condition = document.getElementById('condition');
 const windSpeed = document.getElementById('windSpeed');
 const humidity = document.getElementById('humidity');
+
+if (darkModeToggle) {
+    darkModeToggle.addEventListener('change', () => {
+        document.body.classList.toggle('light-mode', darkModeToggle.checked);
+    });
+}
 
 searchBtn.addEventListener('click', () => {
     const city = cityInput.value;

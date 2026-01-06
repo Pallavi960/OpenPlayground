@@ -25,17 +25,83 @@ body {
     color: var(--text);
 }
 
+body.light-mode {
+    background: linear-gradient(135deg, #f8fafc, #e5e7eb);
+    color: #111827;
+}
+
+body.light-mode .card {
+    background: #ffffff;
+    border: 1px solid rgba(15, 23, 42, 0.08);
+    box-shadow: 0 12px 30px rgba(15, 23, 42, 0.15);
+}
+
+/* condition badge / text */
+body.light-mode .condition {
+    color: #1f2937;
+    /* dark readable text */
+    background: rgba(37, 99, 235, 0.08);
+    /* subtle blue tint */
+}
+
+/* value numbers */
+body.light-mode .val {
+    color: #2563eb;
+}
+
+/* LIGHT MODE SEARCH BOX */
+body.light-mode .search-box input {
+    background: #ffffff;
+    color: #111827;
+    border: 1px solid rgba(15, 23, 42, 0.15);
+}
+
+body.light-mode .search-box input::placeholder {
+    color: #6b7280;
+}
+
+/* optional: search container */
+body.light-mode .search-box {
+    background: transparent;
+}
+/* LIGHT MODE TOGGLE */
+body.light-mode .slider {
+    background: rgba(15, 23, 42, 0.15);
+}
+
+body.light-mode .slider::before {
+    background: #ffffff;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+}
+
+/* icons visibility */
+body.light-mode .slider .sun {
+    opacity: 1;
+}
+
+body.light-mode .slider .moon {
+    opacity: 0;
+}
+
 @keyframes gradientBG {
-    0% { background-position: 0% 50%; }
-    50% { background-position: 100% 50%; }
-    100% { background-position: 0% 50%; }
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
 }
 
 /* THE CARD - Now darker and more solid */
 .card {
     background: var(--glass);
     /* High blur to hide the background details behind text */
-    backdrop-filter: blur(25px); 
+    backdrop-filter: blur(25px);
     -webkit-backdrop-filter: blur(25px);
     padding: 2.5rem;
     border-radius: 24px;
@@ -59,10 +125,63 @@ body {
     /* Lighter background to pop against the dark card */
     background: rgba(255, 255, 255, 0.1);
     border: 1px solid rgba(255, 255, 255, 0.2);
-    border-radius: 50px;
-    padding: 12px 20px;
+    border-radius: 25px;
+    padding: 12px 10px;
     margin-bottom: 30px;
     transition: background 0.3s;
+}
+
+.card {
+    position: relative;
+    /* anchor for absolute positioning */
+    padding-top: 3rem;
+    /* prevent overlap with heading */
+}
+
+/* Toggle switch */
+.switch {
+    position: absolute;
+    top: 16px;
+    right: 16px;
+    width: 46px;
+    height: 24px;
+}
+
+/* rest stays same */
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    inset: 0;
+    background-color: rgba(255, 255, 255, 0.2);
+    transition: 0.3s;
+    border-radius: 999px;
+}
+
+.slider::before {
+    position: absolute;
+    content: "";
+    height: 18px;
+    width: 18px;
+    left: 4px;
+    bottom: 3px;
+    background-color: #ffffff;
+    transition: 0.3s;
+    border-radius: 50%;
+}
+
+
+input:checked+.slider {
+    background-color: #ffffff;
+}
+
+input:checked+.slider::before {
+    transform: translateX(18px);
 }
 
 .search-box:focus-within {
@@ -142,7 +261,7 @@ button:hover {
     font-weight: 400;
     text-transform: capitalize;
     color: #eee;
-    background: rgba(255,255,255,0.1);
+    background: rgba(255, 255, 255, 0.1);
     display: inline-block;
     padding: 5px 15px;
     border-radius: 20px;
@@ -150,7 +269,8 @@ button:hover {
 
 .details {
     display: flex;
-    justify-content: space-around; /* Better spacing */
+    justify-content: space-around;
+    /* Better spacing */
     padding: 0 10px;
     border-top: 1px solid rgba(255, 255, 255, 0.1);
     padding-top: 20px;
@@ -200,14 +320,33 @@ button:hover {
 }
 
 @keyframes spin {
-    0% { transform: rotate(0deg); }
-    100% { transform: rotate(360deg); }
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
 }
 
 @keyframes shake {
-    0% { transform: translateX(0); }
-    25% { transform: translateX(-5px); }
-    50% { transform: translateX(5px); }
-    75% { transform: translateX(-5px); }
-    100% { transform: translateX(0); }
+    0% {
+        transform: translateX(0);
+    }
+
+    25% {
+        transform: translateX(-5px);
+    }
+
+    50% {
+        transform: translateX(5px);
+    }
+
+    75% {
+        transform: translateX(-5px);
+    }
+
+    100% {
+        transform: translateX(0);
+    }
 }
