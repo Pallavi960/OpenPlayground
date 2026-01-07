@@ -1084,16 +1084,26 @@
     "coverStyle": "background: linear-gradient(135deg, #7f1d1d 0%, #1f2937 100%); color:#fef2f2;"
   },
   {
-    "title": "Sorting Visualizer",
+    "title": "Sudoku Solver",
     "category": "utility",
-    "description": "Interactive visualizer for sorting algorithms (Bubble, Merge, Quick, etc.).",
+    "description": "Play Sudoku, generate infinite puzzles, or watch the AI solve them.",
     "tech": [
       "HTML",
       "CSS",
       "JS"
     ],
-    "link": "./projects/Sorting_Visualizer/index.html",
-    "icon": "ri-bar-chart-grouped-line",
-    "coverStyle": "background: linear-gradient(135deg, #3b82f6 0%, #8b5cf6 100%); color: white;"
-  }
+    "link": "./projects/Sudoku_Solver/index.html",
+    "icon": "ri-grid-fill",
+    "coverStyle": "background: linear-gradient(135deg, #10b981 0%, #3b82f6 100%); color: white;"
+  },
+  {
+  "title": "Sorting Visualizer",
+  "category": "utility",
+  "description": "Interactive visualizer for sorting algorithms (Bubble, Merge, Quick, etc.).",
+  "tech": ["HTML", "CSS", "JS"],
+  "link": "./projects/Sorting_Visualizer/index.html",
+  "icon": "ri-bar-chart-grouped-line",
+  "coverStyle": "background: linear-gradient(135deg, #3b82f6 0%, #8b5cf6 100%); color: white;"
+}
+
 ]
