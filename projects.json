@@ -1045,6 +1045,19 @@
     "coverStyle": "background: #22c55e; color: white;"
   },
   {
+    "title": "Number To Roman Converter",
+    "category": "utility",
+    "description": "Convert numbers to Roman numerals.",
+    "tech": [
+      "HTML",
+      "CSS",
+      "JS"
+    ],
+    "link": "./projects/Number to roman convertor/index.html",
+    "icon": "ri-exchange-line",
+    "coverStyle": "background: linear-gradient(135deg, #a8edea 0%, #fed6e3 100%); color: #7c2d12;"
+  },
+  {
     "title": "Text Formatter & Cleaner",
     "category": "utility",
     "description": "Format and clean text with ease.",
